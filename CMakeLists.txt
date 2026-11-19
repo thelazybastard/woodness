@@ -36,7 +36,9 @@ set(SOURCE_CODE
     src/main.c
 )
 
-add_executable(${PROJECT_NAME} ${SOURCE_CODE})
+add_executable(${PROJECT_NAME} ${SOURCE_CODE}
+    src/menu.c
+    src/menu.h)
 target_include_directories(${PROJECT_NAME} PRIVATE ${raygui_SOURCE_DIR}/src)
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
 
