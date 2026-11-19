@@ -2,6 +2,8 @@
 #include "raylib.h"
 #include <raygui.h>
 
+MenuState menu_state = IN_MENU;
+
 void create_menu(void) {
 	int screen_width = GetScreenWidth();
 	int screen_height = GetScreenHeight();

@@ -6,8 +6,6 @@ typedef enum MenuState {
 	START_GAME,
 } MenuState;
 
-MenuState menu_state = IN_MENU;
-
 void create_menu(void);
 
 bool is_in_menu(void);

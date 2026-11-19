@@ -1,5 +1,7 @@
 #include <raylib.h>
 #define RAYGUI_IMPLEMENTATION
+#include "menu.h"
+#include <raygui.h>
 
 #define SCREEN_WIDTH GetScreenWidth()
 #define SCREEN_HEIGHT GetScreenHeight()
@@ -27,6 +29,9 @@ int main(void) {
 
 		switch (game_state) {
 		case MENU:
+			if (!is_in_menu()) {
+				game_state = CUTSCENE;
+			}
 		case CUTSCENE:
 			break;
 		case REGULAR_LEVEL:
@@ -44,6 +49,7 @@ int main(void) {
 
 		switch (game_state) {
 		case MENU:
+			create_menu();
 		case CUTSCENE:
 			break;
 		case REGULAR_LEVEL:
